@@ -17,7 +17,11 @@ class GradientContainer extends StatelessWidget {
         gradient: LinearGradient(
             colors: [color1, color2], begin: startAlignment, end: endAlignment),
       ),
-      child: const Center(child: StyledText('Hello Sameer here')),
+      child: Column(children: [
+        Image.asset('assets/images/dice-1.png'),
+        const SizedBox(height: 20),
+        const TextButton(onPressed: null, child: Text("Click me!"))
+      ]),
     );
   }
 }

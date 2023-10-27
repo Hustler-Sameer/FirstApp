@@ -10,8 +10,8 @@ void main() {
   runApp(const MaterialApp(
     home: Scaffold(
         // ignore: avoid_unnecessary_containers
-        body: GradientContainer(Color.fromARGB(90, 108, 5, 112),
-            Color.fromARGB(31, 250, 247, 247))),
+        body: GradientContainer(
+            Color.fromARGB(90, 0, 0, 0), Color.fromARGB(200, 53, 4, 4))),
   ));
 }
 // here we are also now deciding the gradient color for our image
