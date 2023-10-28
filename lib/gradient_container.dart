@@ -1,4 +1,6 @@
-import 'package:firstapp/styled_text.dart';
+// ignore_for_file: must_be_immutable
+
+import 'package:firstapp/dice_roller.dart';
 import 'package:flutter/material.dart';
 
 var startAlignment = Alignment.topLeft;
@@ -10,6 +12,9 @@ class GradientContainer extends StatelessWidget {
   final Color color1;
   final Color color2;
 
+  // column widget takes the entire space
+  // hence to center it veritcally we can reduce the mainAxisSixze
+
   @override
   Widget build(context) {
     return Container(
@@ -17,11 +22,7 @@ class GradientContainer extends StatelessWidget {
         gradient: LinearGradient(
             colors: [color1, color2], begin: startAlignment, end: endAlignment),
       ),
-      child: Column(children: [
-        Image.asset('assets/images/dice-1.png'),
-        const SizedBox(height: 20),
-        const TextButton(onPressed: null, child: Text("Click me!"))
-      ]),
+      child: Center(child: DiceRoller()),
     );
   }
 }
@@ -44,4 +45,3 @@ class GradientContainer extends StatelessWidget {
 //     );
 //   }
 // }
-
